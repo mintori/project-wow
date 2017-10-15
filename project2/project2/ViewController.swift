@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet var menuDisplay: UILabel!
     var loginCor : String!
     var loginOk : Bool = false
-    var coffeeName : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +26,6 @@ class ViewController: UIViewController {
         let destVC = segue.destination
         let button = sender as! UIButton
         destVC.title = button.titleLabel?.text
-    }
+    } // 넘어가는 모든 view의 title에 button의이름을 보여준다.
 }
 
