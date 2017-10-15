@@ -439,7 +439,6 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="sb0-lB-olW" id="r44-mK-h4Y"/>
-                        <outlet property="button" destination="cZO-Uk-1lp" id="PlQ-af-sPC"/>
                         <outlet property="hotCold" destination="3KW-yL-G8E" id="F3S-cf-TI0"/>
                         <outlet property="iceChoice" destination="Bkq-oP-2n0" id="lTb-OS-qRZ"/>
                         <outlet property="iceChoiceSl" destination="rDR-yJ-D9D" id="pFZ-zL-DyX"/>

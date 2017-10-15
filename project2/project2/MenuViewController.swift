@@ -9,7 +9,6 @@
 import UIKit
 
 class MenuViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
-    
 
     @IBOutlet var display: UILabel!
     @IBOutlet var coffeeImage: UIImageView!
@@ -35,6 +34,7 @@ class MenuViewController: UIViewController,UIPickerViewDelegate,UIPickerViewData
     let coffee6 = UIImage(named: "strawberry.png")
     
     @IBAction func pressed(_ sender: UIButton) {
+        
         let index = picker.selectedRow(inComponent: 0)
         
         if coffee[index]=="아메리카노" {

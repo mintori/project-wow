@@ -27,16 +27,6 @@ class ViewController: UIViewController {
         let destVC = segue.destination
         let button = sender as! UIButton
         destVC.title = button.titleLabel?.text
-        if segue.identifier == "login"{
-        }
-        else if segue.identifier == "menu"{
-        }
-        else if segue.identifier == "order"{
-        }
-        else if segue.identifier == "news"{
-        }
-        else if segue.identifier == "member"{
-        }
     }
 }
 

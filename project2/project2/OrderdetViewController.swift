@@ -10,9 +10,7 @@ import UIKit
 
 class OrderdetViewController: UIViewController {
     
-    
     @IBOutlet var label: UILabel!
-    var coffeeName: String!
     
     @IBOutlet var milkChoice: UIView!
     @IBOutlet var syrupChoice: UIView!
@@ -23,16 +21,13 @@ class OrderdetViewController: UIViewController {
     
     var syrup : Int=0
     var milk : String="일반"
-    var ice : Int=0
+    var ice : Int=0 
     var coName : String!
-
-    @IBOutlet var button: UIButton!
-    
-    @IBOutlet var hotCold: UISegmentedControl!
-    @IBOutlet var option: UISegmentedControl!
-    
+    var coffeeName: String!
     var orderOK : Bool = false
     
+    @IBOutlet var hotCold: UISegmentedControl! //hot or cold?
+    @IBOutlet var option: UISegmentedControl! //syrup,milk,ice
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
     @IBAction func coffeeMaking(_ sender: Any) {
@@ -81,7 +76,7 @@ class OrderdetViewController: UIViewController {
     }
     
     
-    @IBAction func success(_ sender: Any) {
+    @IBAction func success(_ sender: Any) { //주문완료!
         syrupChoice.isHidden = true
         iceChoice.isHidden = true
         milkChoice.isHidden = true
@@ -89,7 +84,7 @@ class OrderdetViewController: UIViewController {
         orderOK = true
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { //별적립,주문내역
         let destVC = segue.destination as! StarViewController
         let button = sender as! UIButton
         destVC.title = button.titleLabel?.text
@@ -98,7 +93,7 @@ class OrderdetViewController: UIViewController {
         destVC.ice = ice
         destVC.coName = coName //hot or cold?
         destVC.coffeeName = coffeeName
-        if orderOK == true && coName != nil {
+        if orderOK == true && coName != nil { //주문완료가되어야내역ok,별적립ok
             destVC.star = 1
             destVC.progressOK = true
         }
